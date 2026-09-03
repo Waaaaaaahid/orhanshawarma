@@ -3,31 +3,30 @@ import { signatureProduct } from '@/data/restaurantData';
 import { Reveal } from '@/components/Reveal';
 import { SectionLabel } from '@/components/SectionLabel';
 
+const signatureImage = '/images/nalli-shawarma.webp';
+
 export function SignatureProduct() {
   return (
     <section
       id="signature"
       className="relative overflow-hidden bg-ink-900 py-20 lg:py-32"
     >
-      {/* Yellow accent border top */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-400/60 to-transparent" />
 
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
-          {/* Image */}
           <Reveal>
             <div className="relative">
               <div className="absolute -inset-3 border border-gold-400/30" />
               <div className="relative overflow-hidden">
                 <img
-                  src={signatureProduct.image}
+                  src={signatureImage}
                   alt="Nalli Shawarma — Orhan's signature dish"
                   className="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink-950/50 to-transparent" />
               </div>
-              {/* Floating label */}
               <div className="absolute -bottom-6 right-6 bg-gold-400 px-6 py-3 lg:right-12">
                 <span className="font-display text-xl uppercase text-ink-950 lg:text-2xl">
                   Signature
@@ -36,7 +35,6 @@ export function SignatureProduct() {
             </div>
           </Reveal>
 
-          {/* Content */}
           <Reveal delay={150}>
             <SectionLabel className="mb-4">
               {signatureProduct.label}
@@ -50,7 +48,6 @@ export function SignatureProduct() {
               {signatureProduct.description}
             </p>
 
-            {/* Features */}
             <ul className="mt-8 space-y-3">
               {signatureProduct.features.map((feature, i) => (
                 <li
