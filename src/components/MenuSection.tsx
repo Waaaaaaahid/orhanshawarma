@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react';
-import { menuItems, menuCategories } from '@/data/restaurantData';
+import { menuItems, menuCategories } from '@/data/verifiedMenu';
 import type { MenuItem } from '@/data/restaurantData';
 import { MenuCard } from '@/components/MenuCard';
 import { MenuModal } from '@/components/MenuModal';
@@ -15,7 +15,6 @@ export function MenuSection() {
     return menuItems.filter((item) => item.category === activeCategory);
   }, [activeCategory]);
 
-  // Only show categories that have at least one item
   const availableCategories = useMemo(() => {
     return menuCategories.filter((cat) => {
       if (cat === 'ALL') return true;
@@ -29,7 +28,6 @@ export function MenuSection() {
       className="relative overflow-hidden bg-ink-950 py-20 lg:py-32"
     >
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        {/* Header */}
         <Reveal className="text-center">
           <SectionLabel className="mb-4 justify-center">
             Eat Well
@@ -42,7 +40,6 @@ export function MenuSection() {
           </p>
         </Reveal>
 
-        {/* Filters */}
         <Reveal delay={100}>
           <div className="mt-12 flex flex-wrap justify-center gap-2 lg:gap-3">
             {availableCategories.map((cat) => (
@@ -61,7 +58,6 @@ export function MenuSection() {
           </div>
         </Reveal>
 
-        {/* Grid */}
         <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {filteredItems.map((item, i) => (
             <Reveal key={item.id} delay={i * 60}>
@@ -70,7 +66,6 @@ export function MenuSection() {
           ))}
         </div>
 
-        {/* Empty state */}
         {filteredItems.length === 0 && (
           <p className="mt-16 text-center text-gray-500">
             No items in this category yet.
