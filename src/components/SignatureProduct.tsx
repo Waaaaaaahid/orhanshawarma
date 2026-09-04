@@ -3,7 +3,7 @@ import { signatureProduct } from '@/data/restaurantData';
 import { Reveal } from '@/components/Reveal';
 import { SectionLabel } from '@/components/SectionLabel';
 
-const signatureImage = 'https://res.cloudinary.com/dnahjh4qz/image/upload/v1788518873/images_23_hb44yo.jpg';
+const signatureImage = 'https://s.alicdn.com/@sc04/kf/He8514aa6bf3445cf9b8186b82e4107777/Commercial-Restaurant-Stainless-Steel-Shawarma-Machine-with-Bottom-Motor-Electric-Power-Source-on-Sale-in-Zambia.png';
 
 export function SignatureProduct() {
   return (
@@ -15,7 +15,7 @@ export function SignatureProduct() {
             <div className="relative">
               <div className="absolute -inset-3 border border-gold-400/30" />
               <div className="relative overflow-hidden bg-ink-950">
-                <img src={signatureImage} alt="Nalli Shawarma — Orhan's signature dish" className="block aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105" loading="eager" decoding="async" />
+                <img src={signatureImage} alt="Commercial shawarma machine with vertical rotisserie" className="block aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105" loading="eager" decoding="async" />
               </div>
               <div className="absolute -bottom-6 right-6 bg-gold-400 px-6 py-3 lg:right-12">
                 <span className="font-display text-xl uppercase text-ink-950 lg:text-2xl">Signature</span>
