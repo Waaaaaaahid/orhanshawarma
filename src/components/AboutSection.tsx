@@ -2,6 +2,8 @@ import { about } from '@/data/restaurantData';
 import { Reveal } from '@/components/Reveal';
 import { SectionLabel } from '@/components/SectionLabel';
 
+const aboutImage = 'https://res.cloudinary.com/dnahjh4qz/image/upload/v1788518873/images_23_hb44yo.jpg';
+
 export function AboutSection() {
   return (
     <section
@@ -17,8 +19,8 @@ export function AboutSection() {
             <div className="relative order-2 lg:order-1">
               <div className="absolute -inset-3 border border-gold-400/20" />
               <img
-                src={about.image}
-                alt="Chef carving shawarma at Orhan Shawarma House"
+                src={aboutImage}
+                alt="Nalli Shawarma at Orhan Shawarma House"
                 className="relative aspect-[4/5] w-full object-cover"
                 loading="lazy"
               />
