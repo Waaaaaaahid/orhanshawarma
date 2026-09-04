@@ -3,7 +3,7 @@ import { signatureProduct } from '@/data/restaurantData';
 import { Reveal } from '@/components/Reveal';
 import { SectionLabel } from '@/components/SectionLabel';
 
-const signatureImage = '/images/nalli-shawarma.webp';
+const signatureImage = 'https://res.cloudinary.com/dnahjh4qz/image/upload/v1788518873/images_23_hb44yo.jpg';
 
 export function SignatureProduct() {
   return (
